@@ -1,0 +1,17 @@
+Welcome Back <%=@user.full_name%>
+<br/>
+<hr>
+</ul>
+<!-- for every blog the user has created -->
+<%@user.blogs.each do |blog| %>
+  <li>
+    <!-- finds the blog by the id, displays the blog title as a link  -->
+    <a href="/blogs/<%=blog.id%>">
+      <%=blog.title%>
+    </a>
+  </li>
+
+<%end%>
+</ul>
+<br/>
+<a href="/users/logout">Log Out</a>
